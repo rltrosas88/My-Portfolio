@@ -1,0 +1,181 @@
+/* primary color, secondary color, tertiary-color */
+:root {
+    --primary-color: rgb(156, 143, 143);
+    --secondary-color: white;
+    --tertiary-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--tertiary-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(156, 143, 143);
+}
+
+/* START HEADER / NAV BAR STYLES */
+header {
+    background-color: var(--tertiary-color);
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    padding: 20px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky; 
+    top: 0;
+    z-index: 9999;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(48, 13, 128, 0.5);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(48, 13, 128, 0.5);
+}
+
+header nav ul li a:hover {}
+/* END HEADER / NAVE BAR STYLES */
+
+/* START FOOTER STYLES */
+footer {
+    background: var(--tertiary-color);
+    background-image: url("../images/background.jpg");
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer h2 {}
+
+footer a {}
+/* END FOOTER STYLES*/
+
+/*START HERO STYLE*/
+.hero {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+.hero-cta {}
+
+.hero-cta h2 {}
+/* HERO STYLES END */
+
+/* START ALL SECTION STYLES*/
+section {
+    padding: 60px;
+}
+/* END ALL SECTION STYLES*/
+
+/* START SECTION TITLE STYLES */
+.section-title {
+    font-size: 48px;
+    color: var(--secondary-color);
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+}
+
+.primary-border {}
+
+.secondary-border {}
+/* END SECTION TITLE STYLES */
+
+/* START PROJECTS*/
+.projects
+/* END PROJECTS
+/* START ABOUT ME */
+/* END ABOUT ME */
+
+/* START LIFE OUTSIDE CODING */
+/* END LIFE OUTSIDE CODING */
+
+/* END UTILITIES */
+.text-left {}
+.text-right {}
+.flex-row {}
+/* END UTILITIES */
+
+/* START MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    footer h2, footer div, .hero-cta {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .section-title {
+        width: 80%;
+    }
+}
+/* END MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+/* START MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+}
+/* END MEDIA QUERY FOR TABLETS AND SMALLER */
+
+/*START MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .section-title {
+        width: 95%;
+    }
+}
+
+
+
+
+
