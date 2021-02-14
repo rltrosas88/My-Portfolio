@@ -1,30 +1,33 @@
-/* primary color, secondary color, tertiary-color */
+
+/* the (:root) selector matches the document's root element*/
 :root {
-    --primary-color: rgb(156, 143, 143);
-    --secondary-color: white;
+    --primary-color: white;
+    --secondary-color: purple;
     --tertiary-color: black;
 }
 
+/* the (*) is a universal selector that selects all HTML elements on the page*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* the (body) is a selector that changes entire body*/
 body {
     background-color: var(--tertiary-color);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(156, 143, 143);
+    color: var(--primary-color);
 }
 
 /* START HEADER / NAV BAR STYLES */
+/* the (header) is a selector that selects all of the header */
 header {
     background-color: var(--tertiary-color);
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-position: 80%;
     padding: 20px 35px;
     display: flex;
     flex-wrap: wrap;
@@ -34,42 +37,35 @@ header {
     z-index: 9999;
 }
 
-header h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: var(--secondary-color);
-    margin: 0;
-    text-shadow: 0 0 10px rgba(48, 13, 128, 0.5);
-}
-
-header a {
-    text-decoration: none;
-    color: var(--secondary-color);
-}
-
+/* the (header nav) is a selector that selects anything under the header nav in the html file*/
 header nav {
     margin: 7px 0;
 }
 
+/* the (header nav ul) is a selector that selects anything under the header nave ul in the html file */
 header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
 }
 
+/* the (header nav u li a) is a selector that selects anything under the header nav ul li a */
 header nav ul li a {
+    color: var (var(--primary-color));
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(48, 13, 128, 0.5);
 }
 
-header nav ul li a:hover {}
+/* :hover is a CSS pseudo-class interacts with an element with a point device*/
+header nav ul li a:hover {
+    font-style: italic;
+}
 /* END HEADER / NAVE BAR STYLES */
 
 /* START FOOTER STYLES */
+/* the (footer) is a selector that selects anything under the footer*/
 footer {
     background: var(--tertiary-color);
     background-image: url("../images/background.jpg");
@@ -80,12 +76,15 @@ footer {
     justify-content: space-between;
 }
 
-footer h2 {}
-
-footer a {}
+/* the (footer h2) is a selector that selects anything under footer h2*/
+footer h2 {
+    text-align: center;
+    width: 100%;
+}
 /* END FOOTER STYLES*/
 
 /*START HERO STYLE*/
+/* the (.hero) is a selector that selects the class="hero" */
 .hero {
     background-image: url("../images/background.jpg");
     background-size: cover;
@@ -94,18 +93,23 @@ footer a {}
     background-position: 80%;
 }
 
-.hero-cta {}
-
-.hero-cta h2 {}
+/* the (.hero h2) is a selector selects the h2 thats under then class="hero" */
+.hero h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 100px;
+}
 /* HERO STYLES END */
 
 /* START ALL SECTION STYLES*/
+/* the (section) is a selector that selects anything under all sections */
 section {
     padding: 60px;
 }
 /* END ALL SECTION STYLES*/
 
 /* START SECTION TITLE STYLES */
+/* the (.section-title) is a selector that selects anything under class="section-title" */
 .section-title {
     font-size: 48px;
     color: var(--secondary-color);
@@ -115,52 +119,70 @@ section {
     margin: 0 auto 35px auto;
     width: 50%;
 }
-
-.primary-border {}
-
-.secondary-border {}
 /* END SECTION TITLE STYLES */
 
 /* START PROJECTS*/
-.projects
+/* the (.latest-projects) is a selector selects everything under the class="latest-project" */
+.latest-project {
+    height: 200px;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* the (.other-projects, .coming-soon) is a selector that selects everything under both class="other-projects" and class="coming-soon" */
+.other-projects,
+.coming-soon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    padding: 20px;
+}
 /* END PROJECTS
+
 /* START ABOUT ME */
+/* the (.about-me) is a selector that selects everything under the class="about-me" */
+.about-me {
+    font-size: 20px;
+}    
+
+/* the (.about-me img) is a selector that selects the images under the class="about-me" */
+.about-me img {
+    float: left;
+    border-radius: 50%;
+    height: 300px;
+    padding: 20px;
+}
+
+
 /* END ABOUT ME */
 
 /* START LIFE OUTSIDE CODING */
+/* the (.life-outside-coding) is a selector that selects everything under the class="life-outside-coding" */
+.life-outside-coding {
+    font-size: 20px;
+}
+
+/* the (.life-outside-coding img) is a selector that selects the images under the class="life-outside-coding" */
+.life-outside-coding img {
+    float: right;
+    height: 200px;
+}
+
 /* END LIFE OUTSIDE CODING */
 
-/* END UTILITIES */
-.text-left {}
-.text-right {}
-.flex-row {}
-/* END UTILITIES */
-
 /* START MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-    header {
-        padding-bottom: 0;
-        justify-content: center;
-        position: relative;
-    }
-    
-    header nav ul {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
-    }
-    footer h2, footer div, .hero-cta {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .section-title {
-        width: 80%;
-    }
+/* the (@media) is a rule in media queries to appyl different styles for when the devices being used change*/
+/* the (screen) is a value used for computer screens, tablets, smart-phones, etc */
+/* the (max-width) is a value that is the max width of the display area*/
+/* this is selecting rules for devices/screens with a width of 980px or less */
+@media screen and (max-width: 980px) {    
 }
 /* END MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
 /* START MEDIA QUERY FOR TABLETS AND SMALLER */
+/* this is selecting rules for devices/screens with a width of 768px or less */
 @media screen and (max-width: 768px) {
     section {
         padding: 30px 15px;
@@ -169,11 +191,13 @@ section {
 /* END MEDIA QUERY FOR TABLETS AND SMALLER */
 
 /*START MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* this is selecting rules for devices/screens with a width of 575px or less*/
 @media screen and (max-width: 575px) {
     .section-title {
         width: 95%;
     }
 }
+/* END MEDIA QUERRY FOR MOBILE PHONES AND SMALLER */
 
 
 
