@@ -124,7 +124,7 @@ section {
 /* START PROJECTS*/
 /* the (.latest-projects) is a selector selects everything under the class="latest-project" */
 .latest-project {
-    height: 200px;
+    height: 300px;
     padding: 20px;
     display: block;
     margin-left: auto;
